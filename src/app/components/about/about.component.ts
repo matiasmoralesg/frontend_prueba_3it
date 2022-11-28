@@ -22,4 +22,7 @@ export class AboutComponent implements OnInit {
   procesos batch.  
   `;
 
+  thanksText = `Agradezco desde ya la oportunidad de poder participar de el proceso de selección y poner 
+  a prueba mis conocimientos.`;
+
 }
