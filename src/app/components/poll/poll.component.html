@@ -1,0 +1,32 @@
+<div>
+  <h2>ENCUESTA</h2>
+  <form [formGroup]="form" (ngSubmit)="IngresarVoto()" >
+    <div class="form-group">
+      
+      <mat-label>Estilo musical</mat-label>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Seleccione una opción</mat-label>
+          <mat-select formControlName="musicStyle">
+            <mat-option *ngFor="let musicStyles of musicStylesList" [value]="musicStyles">{{musicStyles.style}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="controls.musicStyle.errors?.required">Seleccionar una opción es <strong>requerido</strong></mat-error>
+        </mat-form-field>
+      </div>
+      
+      <mat-label>Email</mat-label>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese su email</mat-label>
+          <input matInput placeholder="asd@ejemplo.com" formControlName="email" class="form-control">
+          <mat-error *ngIf="controls.email.errors?.required">Email es <strong>requerido</strong></mat-error>
+          <mat-error *ngIf="controls.email.errors?.pattern">Formato de email es <strong>incorrecto</strong></mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <br>
+    <button mat-raised-button color="accent" type="submit" class="float-right" >ENVIAR</button>
+  
+  </form>
+</div>
+

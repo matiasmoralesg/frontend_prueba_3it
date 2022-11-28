@@ -1,0 +1,8 @@
+.example-header-image {
+    background-image: url('src\assets\img\mmorales.jpg');
+    background-size: cover;
+  }
+
+.card {
+    width: 600px;
+}

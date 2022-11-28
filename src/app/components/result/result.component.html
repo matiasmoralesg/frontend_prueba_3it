@@ -1,0 +1,41 @@
+<h2>RESULTADOS</h2>
+<div class="center-content">
+    <table mat-table [dataSource]="results" class="mat-elevation-z8">   
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="Rock">
+          <th mat-header-cell *matHeaderCellDef> Rock </th>
+          <td mat-cell *matCellDef="let element"> {{element.rockCount}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="Metal">
+          <th mat-header-cell *matHeaderCellDef> Metal </th>
+          <td mat-cell *matCellDef="let element"> {{element.metalCount}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Jazz">
+          <th mat-header-cell *matHeaderCellDef> Jazz </th>
+          <td mat-cell *matCellDef="let element"> {{element.jazzCount}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Blues">
+          <th mat-header-cell *matHeaderCellDef> Blues </th>
+          <td mat-cell *matCellDef="let element"> {{element.bluesCount}} </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Clasico">
+            <th mat-header-cell *matHeaderCellDef> Clasico </th>
+            <td mat-cell *matCellDef="let element"> {{element.clasicoCount}} </td>
+          </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+
+  
+  
